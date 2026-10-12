@@ -1,0 +1,18 @@
+{
+  "name": "court-case-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Court case management system monorepo",
+  "packageManager": "pnpm@10.12.1",
+  "engines": { "node": ">=22.0.0", "pnpm": ">=10.0.0" },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @court/backend --filter @court/frontend dev",
+    "dev:api": "pnpm --filter @court/backend dev",
+    "dev:web": "pnpm --filter @court/frontend dev",
+    "build": "pnpm --filter @court/frontend build",
+    "lint": "pnpm --filter @court/frontend lint",
+    "start": "pnpm --filter @court/backend start",
+    "seed": "pnpm --filter @court/backend seed",
+    "seed:admin": "pnpm --filter @court/backend seed:admin"
+  }
+}
